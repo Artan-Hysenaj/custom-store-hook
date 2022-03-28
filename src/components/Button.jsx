@@ -2,7 +2,8 @@ import React from "react";
 import { useStore } from "../store/store";
 import classes from "./Button.module.css";
 const Button = ({ title, amount, actionType }) => {
-  const dispatch = useStore({ shouldListen: false })[1];
+
+  const [_, dispatch] = useStore({ shouldListen: false });
 
   console.log("button");
 
